@@ -4,5 +4,9 @@ from lppproject import settings
 
 urlpatterns = [
     path('', views.demo, name='demo'),
-    # path('opp/', views.operations, name='operations'),
+path('hom.html', views.hom, name='hom'),
+path('about/', views.about, name='about'),
 ]
+
+
+

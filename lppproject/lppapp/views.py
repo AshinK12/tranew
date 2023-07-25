@@ -16,3 +16,8 @@ def demo(request):
 #     return render(request,"result.html",{'result':res,'subs':sub,'mult':mul,'divs':div})
 #
 #
+def hom(request):
+    return render(request,'hom.html')
+
+def about(request):
+    return redirect(request,'about.html')

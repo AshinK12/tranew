@@ -1,85 +1,124 @@
-{% load static %}
+<!--{% load static %}-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h2>Registration</h2>-->
+
+<!--<form action="register" method="post">-->
+<!--    {% csrf_token %}-->
+<!--    <input type="text" name="username" placeholder="Enter username"><br>-->
+<!--        <input type="text" name="first_name" placeholder="Enter your firstname"><br>-->
+<!--        <input type="text" name="last_name" placeholder="Enter lastname"><br>-->
+<!--        <input type="email" name="email" placeholder="Enter email"><br>-->
+<!--          <input type="password" name="password" placeholder="Enter password"><br>-->
+<!--    <input type="password" name="password1" placeholder="Enter password again"><br>-->
+<!--    <input type="submit">-->
+
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <title>Sign Up Form by Colorlib</title>-->
+
+<!--    &lt;!&ndash; Font Icon &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="{% static 'fonts2/material-icon/css/material-design-iconic-font.min.css' %}">-->
+
+<!--    &lt;!&ndash; Main css &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="{% static 'css2/style.css' %}">-->
+<!--</head>-->
+<!--<body>-->
+
+<!--    <div class="main">-->
+
+<!--        <div class="container">-->
+<!--            <div class="signup-content">-->
+<!--                <form action="register" method="post">-->
+<!--                    {% csrf_token %}-->
+
+<!--                    <h2>Sign up </h2>-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="text" class="form-input" name="username" id="name" placeholder="Your Name"/>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="text" class="form-input" name="first_name" id="first_name" placeholder="your name"/>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="text" class="form-input" name="last_name" id="last_name" placeholder="lastname"/>-->
+
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="email" class="form-input" name="email" id="email" placeholder="email"/>-->
+
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="password" class="form-input" name="password" id="password" placeholder="password"/>-->
+<!--                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="password" class="form-input" name="password1" id="password1" placeholder="password again"/>-->
+<!--                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>-->
+<!--                    </div>-->
+
+<!--                    <div class="form-group">-->
+<!--                        <input type="submit" name="submit" id="submit" class="form-submit submit" value="Sign up"/>-->
+
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    </div>-->
+
+<!--    &lt;!&ndash; JS &ndash;&gt;-->
+<!--    <script src="vendor/jquery/jquery.min.js"></script>-->
+<!--    <script src="{% static 'js2/main.js' %}"></script>-->
+<!--</body>&lt;!&ndash; This templates was made by Colorlib (https://colorlib.com) &ndash;&gt;-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title></title>
 </head>
-<body>
-<h2>Registration</h2>
+<body style="background-color:skyblue;">
 
-<form action="register" method="post">
+<h1 style="color:blue;">Registration</h1>
+
+<form action="new" method="post" >
     {% csrf_token %}
-    <input type="text" name="username" placeholder="Enter username"><br>
-        <input type="text" name="first_name" placeholder="Enter your firstname"><br>
-        <input type="text" name="last_name" placeholder="Enter lastname"><br>
-        <input type="email" name="email" placeholder="Enter email"><br>
-          <input type="password" name="password" placeholder="Enter password"><br>
-    <input type="password" name="password1" placeholder="Enter password again"><br>
+    <input type="text" name="username" placeholder="enter your user name"> <br>
+    <input type="text" name="first_name" placeholder="enter your first_name"> <br>
+    <input type="text" name="last_name" placeholder="enter your last_name"> <br>
+    <input type="email" name="email" placeholder="enter your Email"> <br>
+    <input type="password" name="password" placeholder="enter your password"><br>
+    <input type="password" name="password1" placeholder="confirm your password"><br>
     <input type="submit">
 
+
+
 </form>
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+
 </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
-
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="{% static 'fonts2/material-icon/css/material-design-iconic-font.min.css' %}">
-
-    <!-- Main css -->
-    <link rel="stylesheet" href="{% static 'css2/style.css' %}">
-</head>
-<body>
-
-    <div class="main">
-
-        <div class="container">
-            <div class="signup-content">
-                <form action="register" method="post">
-                    {% csrf_token %}
-
-                    <h2>Sign up </h2>
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="username" id="name" placeholder="Your Name"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="first_name" id="first_name" placeholder="your name"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="last_name" id="last_name" placeholder="lastname"/>
-
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-input" name="email" id="email" placeholder="email"/>
-
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-input" name="password" id="password" placeholder="password"/>
-                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-input" name="password1" id="password1" placeholder="password again"/>
-                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="submit" name="submit" id="submit" class="form-submit submit" value="Sign up"/>
-
-                    </div>
-                </form>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- JS -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="{% static 'js2/main.js' %}"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

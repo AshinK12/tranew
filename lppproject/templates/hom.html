@@ -18,7 +18,7 @@
 <body>
 
 <div class="super_container">
-	
+
 	<!-- Header -->
 
 	<header class="header">
@@ -27,10 +27,10 @@
 				<div class="col">
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
 						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-							<div class="logo"><a href="index.html">Travello</a></div>
+							<div class="logo"><a href="hom.html">Travello</a></div>
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li><a href="index.html">Home</a></li>
+									<li><a href="hom.html">Home</a></li>
 									<li class="active"><a href="about.html">About us</a></li>
 									{% if user.is_authenticated %}
 									<li>Hello {{user.username}}</li>
@@ -95,7 +95,7 @@
 			</ul>
 		</div>
 	</div>
-	
+
 	<!-- Home -->
 
 	<div class="home">
@@ -159,7 +159,7 @@
 	<div class="milestones">
 		<div class="container">
 			<div class="row">
-				
+
 				<!-- Milestone -->
 				<div class="col-lg-3 milestone_col">
 					<div class="milestone text-center">
@@ -212,7 +212,7 @@
 				</div>
 			</div>
 			<div class="row why_row">
-				
+
 				<!-- Why item -->
 				{% for i in result %}
 				<div class="col-lg-4 why_col">
@@ -285,7 +285,7 @@
 			</div>
 
 			<div class="row team_row">
-				
+
 				<!-- Team Item -->
 				{% for j in res %}
 
